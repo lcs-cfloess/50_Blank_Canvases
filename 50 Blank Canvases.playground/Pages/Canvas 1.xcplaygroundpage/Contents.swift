@@ -27,7 +27,7 @@ let canvas = Canvas(width: 500, height:500)
 
 for x in stride(from: 25, through: 475, by: 50){
     for y in stride(from: 475, through: 25, by: -50){
-        let location = random(from: 1, toButNotIncluding: 5)
+        let location = random(from: 1, toButNotIncluding: 7)
         canvas.fillColor = Color.black
         canvas.drawEllipse(centreX: x, centreY: y, width: 30, height: 30)
         
@@ -35,17 +35,25 @@ for x in stride(from: 25, through: 475, by: 50){
             canvas.fillColor = Color.white
             canvas.drawEllipse(centreX: x, centreY: y+25, width: 30, height: 30, borderWidth: 2)
         } else if location == 2  {
-            canvas.fillColor = Color.white
+            canvas.fillColor = Color.purple
             canvas.drawEllipse(centreX: x+25, centreY: y, width: 30, height: 30, borderWidth: 2)
         } else if location == 3  {
-            canvas.fillColor = Color.white
+            canvas.fillColor = Color.blue
             canvas.drawEllipse(centreX: x, centreY: y-25, width: 30, height: 30, borderWidth: 2)
         } else if location == 4 {
-            canvas.fillColor = Color.white
-            canvas.drawEllipse(centreX: x, centreY: y-25, width: 30, height: 30, borderWidth: 2)
+            canvas.fillColor = Color.green
+            canvas.drawEllipse(centreX: x-25, centreY: y, width: 30, height: 30, borderWidth: 2)
+        }else if location == 5 {
+            canvas.fillColor = Color.red
+                canvas.drawEllipse(centreX: x-25, centreY: x-15, width: 30, height: 30, borderWidth: 2)
+        }else if location == 6 { canvas.fillColor = Color.orange
+            canvas.drawEllipse(centreX: x-15, centreY: x+25, width: 30, height: 30, borderWidth: 2)
+            
         }
-    }
-}
+            }
+        }
+
+
 /*:
  ## Use source control
  To keep your work organized, and receive feedback, source control is a must.
