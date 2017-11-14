@@ -27,12 +27,12 @@ let canvas = Canvas(width: 500, height:500)
 
 for x in stride(from: 25, through: 475, by: 50){
     for y in stride(from: 475, through: 25, by: -50){
-        let location = random(from: 1, toButNotIncluding: 7)
+        let location = random(from: 1, toButNotIncluding: 8)
         canvas.fillColor = Color.black
         canvas.drawEllipse(centreX: x, centreY: y, width: 30, height: 30)
         
         if location == 1 {
-            canvas.fillColor = Color.white
+            canvas.fillColor = Color.yellow
             canvas.drawEllipse(centreX: x, centreY: y+25, width: 30, height: 30, borderWidth: 2)
         } else if location == 2  {
             canvas.fillColor = Color.purple
@@ -45,10 +45,13 @@ for x in stride(from: 25, through: 475, by: 50){
             canvas.drawEllipse(centreX: x-25, centreY: y, width: 30, height: 30, borderWidth: 2)
         }else if location == 5 {
             canvas.fillColor = Color.red
-                canvas.drawEllipse(centreX: x-25, centreY: x-15, width: 30, height: 30, borderWidth: 2)
+                canvas.drawEllipse(centreX: x, centreY: x-15, width: 30, height: 30, borderWidth: 2)
         }else if location == 6 { canvas.fillColor = Color.orange
-            canvas.drawEllipse(centreX: x-15, centreY: x+25, width: 30, height: 30, borderWidth: 2)
+            canvas.drawEllipse(centreX: x+10, centreY: x    , width: 30, height: 30, borderWidth: 2)
             
+        }else if location == 7 {
+            canvas.fillColor = Color.white
+            canvas.drawEllipse(centreX: x-15, centreY: x, width: 30, height: 30, borderWidth: 2)
         }
             }
         }
